@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Artifact: The 1-Bit Barrier — A Machine-Checked Trichotomy for Barrett Reduction in Masked PQC Hardware"
+type: software
+authors:
+  - family-names: Iskander
+    given-names: Ray
+    orcid: "https://orcid.org/0009-0008-7971-4992"
+  - family-names: Kirah
+    given-names: Khaled
+    orcid: "https://orcid.org/0000-0001-5090-2529"
+version: 1.0.0
+date-released: "2026-04-16"
+license: MIT
+repository-code: "https://github.com/rayiskander2406/qanary-one-bit-barrier-arXiv-XXXX.XXXXX"
+keywords:
+  - post-quantum cryptography
+  - masking
+  - formal verification
+  - Lean 4
+  - Mathlib
+  - Barrett reduction
+  - NTT
+  - ML-KEM
+  - ML-DSA
+  - PF-PINI
+  - min-entropy
+  - probing model
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Iskander
+      given-names: Ray
+      orcid: "https://orcid.org/0009-0008-7971-4992"
+    - family-names: Kirah
+      given-names: Khaled
+      orcid: "https://orcid.org/0000-0001-5090-2529"
+  title: "The 1-Bit Barrier: A Machine-Checked Trichotomy for Barrett Reduction in Masked PQC Hardware"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:XXXX.XXXXX"
+      description: "arXiv preprint (ID pending)"

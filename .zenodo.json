@@ -1,0 +1,38 @@
+{
+  "title": "Artifact: The 1-Bit Barrier — A Machine-Checked Trichotomy for Barrett Reduction in Masked PQC Hardware",
+  "description": "Machine-checked Lean 4 + Mathlib proof that Barrett reduction under first-order arithmetic masking has preimage multiplicity at most 2, tightly attained. For any odd prime modulus q and any Barrett shift s with 2^s >= q, the map m -> ((x - m) mod 2^s) mod q has at most two preimages for each output value (theorem barrett_max_multiplicity_two), and exactly two when both branches apply (theorem barrett_count_eq_two). The algebraic consequence is a universal 1-bit min-entropy bound (H_inf >= log2(q) - 1) on arithmetic-masked Barrett wires across all NTT-based PQC standards (ML-KEM, ML-DSA, Falcon, NTRU Prime). The PF-PINI (Prime-Field PINI) framework instance barrettPFPINI exposes Barrett with parameter 2, complementing the identityPFPINI butterfly instance with parameter 1. All theorems kernel-verified with zero sorry, zero admit, zero axiom. Companion to arXiv:XXXX.XXXXX.",
+  "creators": [
+    {
+      "name": "Iskander, Ray",
+      "orcid": "0009-0008-7971-4992"
+    },
+    {
+      "name": "Kirah, Khaled",
+      "orcid": "0000-0001-5090-2529"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "post-quantum cryptography",
+    "masking",
+    "formal verification",
+    "Lean 4",
+    "Mathlib",
+    "Barrett reduction",
+    "NTT",
+    "ML-KEM",
+    "ML-DSA",
+    "PF-PINI",
+    "min-entropy",
+    "probing model"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "XXXX.XXXXX",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv"
+    }
+  ]
+}
