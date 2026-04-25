@@ -1,6 +1,6 @@
 # The 1-Bit Barrier
 
-**Machine-Checked Side-Channel Leakage Bounds for Masked Barrett Reduction in Post-Quantum Cryptographic Hardware**
+**Machine-Checked Cardinality Bounds for Masked Barrett Reduction: A 1-Bit Side-Channel Leakage Barrier in Post-Quantum Cryptographic Hardware**
 
 [![Lean 4](https://img.shields.io/badge/Lean_4-v4.30.0--rc1-blue)](https://lean-lang.org)
 [![Mathlib](https://img.shields.io/badge/Mathlib-322515540d7f-green)](https://github.com/leanprover-community/mathlib4)
@@ -14,9 +14,9 @@ modulus q and every Barrett shift s with 2^s ≥ q.
 
 This is the artifact repository for:
 
-> R. Iskander, K. Kirah. "The 1-Bit Barrier: Machine-Checked
-> Side-Channel Leakage Bounds for Masked Barrett Reduction in
-> Post-Quantum Cryptographic Hardware."
+> R. Iskander, K. Kirah. "Machine-Checked Cardinality Bounds for
+> Masked Barrett Reduction: A 1-Bit Side-Channel Leakage Barrier
+> in Post-Quantum Cryptographic Hardware."
 > arXiv:XXXX.XXXXX, 2026. *(arXiv ID pending.)*
 
 ## Context: Prior Papers in the Series
@@ -256,9 +256,9 @@ If you use this artifact, please cite the paper:
 ```bibtex
 @article{IskanderKirah2026OneBitBarrier,
   author  = {Ray Iskander and Khaled Kirah},
-  title   = {The 1-Bit Barrier: Machine-Checked Side-Channel Leakage
-             Bounds for Masked Barrett Reduction in Post-Quantum
-             Cryptographic Hardware},
+  title   = {Machine-Checked Cardinality Bounds for Masked Barrett
+             Reduction: A 1-Bit Side-Channel Leakage Barrier in
+             Post-Quantum Cryptographic Hardware},
   journal = {arXiv preprint},
   year    = {2026},
   note    = {arXiv:XXXX.XXXXX (ID pending)},

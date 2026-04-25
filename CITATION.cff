@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the paper below."
-title: "Artifact: The 1-Bit Barrier — Machine-Checked Side-Channel Leakage Bounds for Masked Barrett Reduction in Post-Quantum Cryptographic Hardware"
+title: "Artifact: Machine-Checked Cardinality Bounds for Masked Barrett Reduction — A 1-Bit Side-Channel Leakage Barrier in Post-Quantum Cryptographic Hardware"
 type: software
 authors:
   - family-names: Iskander
@@ -35,7 +35,7 @@ preferred-citation:
     - family-names: Kirah
       given-names: Khaled
       orcid: "https://orcid.org/0000-0001-5090-2529"
-  title: "The 1-Bit Barrier: Machine-Checked Side-Channel Leakage Bounds for Masked Barrett Reduction in Post-Quantum Cryptographic Hardware"
+  title: "Machine-Checked Cardinality Bounds for Masked Barrett Reduction: A 1-Bit Side-Channel Leakage Barrier in Post-Quantum Cryptographic Hardware"
   year: 2026
   identifiers:
     - type: other
