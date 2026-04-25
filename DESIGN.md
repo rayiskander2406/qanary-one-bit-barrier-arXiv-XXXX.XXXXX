@@ -62,91 +62,7 @@ sorry, zero admit, zero axiom. All kernel-verified (no `native_decide`).**
    attempted — the algebraic theorem already covers every odd prime,
    so a PQC-specific native-decide instance would be redundant.
 
-## 3. 5-Persona Adversarial Audit (Internal)
-
-### Persona 1 — Pedantic Mathematician — CONDITIONAL
-
-- **P1-1 (SERIOUS).** The algebraic `barrettInternalMap` uses a ZMod
-  case split on `m.val ≤ x.val`, not the Nat arithmetic of the
-  hardware. The equivalence to `barrettInternalMapNat` is asserted
-  but not formally proved. Paper must state clearly that the
-  algebraic definition is used for all proofs, with the Nat
-  equivalence as computational evidence.
-- **P1-2 (MINOR).** The scope condition `q ≤ 2^s` appears in
-  `barrettInternalMapNat` but not in `barrettInternalMap` or the main
-  theorems. The main theorems are therefore *more* general than
-  needed — strength, not bug.
-- **P1-3 (MINOR).** Edge case `q = 1`: `ZMod 1` is the trivial ring;
-  all theorems hold vacuously.
-- **Verdict.** CONDITIONAL on P1-1 being disclosed in the paper.
-
-### Persona 2 — CHES Reviewer Who Wants to Reject — CONDITIONAL
-
-- **P2-1 (SERIOUS).** "You found count=0 cases — isn't your masking
-  scheme broken?" *Response:* No. count=0 reduces the output entropy
-  (some values never occur) but does not add leakage. The security
-  bound is max-probability, not min-support. An attacker conditions
-  only on values they actually observe; count=0 values are simply
-  absent from the observation space.
-- **P2-2 (MINOR).** "The PF-PINI composition theorem has no proof."
-  *Response:* The paper does not claim a formal composition theorem.
-  It claims (1) `barrettPFPINI` with parameter 2 (proved), (2)
-  fresh inter-stage masking decouples stages (observation, standard
-  PINI argument), (3) pipeline bound follows from per-stage analysis
-  (informal). Composition is stated as an observation.
-- **P2-3 (MINOR).** "The algebraic definition doesn't model hardware
-  Barrett." *Response:* The two-branch structure captures hardware
-  Barrett's wraparound exactly. `barrettInternalMapNat` is provided
-  and computationally verified to match.
-- **Verdict.** CONDITIONAL on P2-1 defense in the paper.
-
-### Persona 3 — Reproduction Engineer — PASS
-
-- `lake build` succeeds cleanly (1,169 jobs, no errors, no warnings).
-- All Lean files have correct imports; Mathlib pinned
-  (`322515540d7f`).
-- Toolchain pinned (`v4.30.0-rc1`).
-- No `native_decide` in the universal proof suite.
-- `reproduce.py --check` passes 9/9 gates.
-
-### Persona 4 — Adams Bridge Designer — PASS
-
-- Theorem applies: s = 24, q = 3329, `2^24 ≫ 3329`, scope satisfied.
-- The scope condition is trivially satisfied and the theorem does
-  not even require it.
-- count=0 cases: for x=0, the value v=2385 (= `2^24 mod 3329`) has
-  count=0. This is informational, not a vulnerability.
-- Paper 1's 165 INSECURE_CONSERVATIVE Barrett wires: each leaks at
-  most 1 bit under this bound.
-
-### Persona 5 — Impact Maximizer — CONDITIONAL
-
-- **P5-1.** The title "The 1-Bit Barrier" captures the result
-  precisely. The trichotomy {0, 1, 2} is even more precise than
-  "at most 2" and should be used in the abstract.
-- **P5-2 (MINOR).** The five-paper arc connection should be explicit
-  in §1 Introduction: find → detect → foundations → compose → bound.
-- **P5-3 (SUGGESTION).** The `identityPFPINI` instance (butterfly =
-  PF-PINI(1)) directly connects to Paper 4's
-  `butterfly_wire_count_eq_one`. Cite this connection:
-  *"Paper 4 proved PF-PINI(1) for the butterfly; this paper proves
-  PF-PINI(2) for Barrett."*
-- **Verdict.** CONDITIONAL on P5-2/P5-3 in paper writing.
-
-### Audit Summary
-
-| Persona | Verdict | Type of finding |
-|---------|---------|-----------------|
-| Pedantic Mathematician | CONDITIONAL | paper-writing (Nat equivalence disclaimer) |
-| CHES Reviewer | CONDITIONAL | paper-writing (count=0 defense) |
-| Reproduction Engineer | PASS | — |
-| Adams Bridge Designer | PASS | — |
-| Impact Maximizer | CONDITIONAL | paper-writing (arc + Paper 4 connection) |
-
-**No BLOCK findings. All CONDITIONAL items are paper-writing items,
-not proof gaps.**
-
-## 4. Paper Structure (Intended)
+## 3. Paper Structure (Intended)
 
 ### §1 Introduction
 The Barrett composition problem in masked NTT hardware. Why existing
@@ -201,7 +117,7 @@ five-paper arc.
 
 ---
 
-## 5. Framework Reconnaissance (consolidated from the de-risk phase)
+## 4. Framework Reconnaissance (consolidated from the de-risk phase)
 
 This section consolidates the empirical and analytical
 reconnaissance that preceded the formal proof. Content adapted from
@@ -280,7 +196,7 @@ This provides a quantitative bound on Paper 1's conservative flag.
 
 ---
 
-## 6. Universality Theorem and Empirical Evidence
+## 5. Universality Theorem and Empirical Evidence
 
 ### 6.1 Theorem Statement
 
@@ -361,7 +277,7 @@ or the specific modulus.
 
 ---
 
-## 7. Open Questions
+## 6. Open Questions
 
 1. Is the Nat-equivalence formalization worth the effort for the
    arXiv version, or is computational verification sufficient?
