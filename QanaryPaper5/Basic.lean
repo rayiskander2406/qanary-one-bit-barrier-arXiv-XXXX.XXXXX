@@ -3,9 +3,9 @@
   ==================
   The Barrett internal wire map and its two-branch structure.
 
-  Paper: "The 1-Bit Barrier: Universal Leakage Bounds for
-  Arithmetic Masking Through Modular Reduction"
-  (Iskander & Kirah, 2026)
+  Paper: "Machine-Checked Cardinality Bounds for Masked Barrett
+  Reduction: A 1-Bit Side-Channel Leakage Barrier in Post-Quantum
+  Cryptographic Hardware" (Iskander & Kirah, arXiv:2604.24670, 2026)
 
   The Barrett internal wire map has two branches depending on
   whether the Nat subtraction wraps around 2^s:

@@ -1,6 +1,6 @@
 {
   "title": "Artifact: Machine-Checked Cardinality Bounds for Masked Barrett Reduction — A 1-Bit Side-Channel Leakage Barrier in Post-Quantum Cryptographic Hardware",
-  "description": "Machine-checked Lean 4 + Mathlib proof that Barrett reduction under first-order arithmetic masking has preimage multiplicity at most 2, tightly attained. For any odd prime modulus q and any Barrett shift s with 2^s >= q, the map m -> ((x - m) mod 2^s) mod q has at most two preimages for each output value (theorem barrett_max_multiplicity_two), and exactly two when both branches apply (theorem barrett_count_eq_two). The algebraic consequence is a universal 1-bit min-entropy bound (H_inf >= log2(q) - 1) on arithmetic-masked Barrett wires across all NTT-based PQC standards (ML-KEM, ML-DSA, Falcon, NTRU Prime). The PF-PINI (Prime-Field PINI) framework instance barrettPFPINI exposes Barrett with parameter 2, complementing the identityPFPINI butterfly instance with parameter 1. All theorems kernel-verified with zero sorry, zero admit, zero axiom. Companion to arXiv:XXXX.XXXXX.",
+  "description": "Machine-checked Lean 4 + Mathlib proof that Barrett reduction under first-order arithmetic masking has preimage multiplicity at most 2, tightly attained. For any odd prime modulus q and any Barrett shift s with 2^s >= q, the map m -> ((x - m) mod 2^s) mod q has at most two preimages for each output value (theorem barrett_max_multiplicity_two), and exactly two when both branches apply (theorem barrett_count_eq_two). The algebraic consequence is a universal 1-bit min-entropy bound (H_inf >= log2(q) - 1) on arithmetic-masked Barrett wires across all NTT-based PQC standards (ML-KEM, ML-DSA, Falcon, NTRU Prime). The PF-PINI (Prime-Field PINI) framework instance barrettPFPINI exposes Barrett with parameter 2, complementing the identityPFPINI butterfly instance with parameter 1. All theorems kernel-verified with zero sorry, zero admit, zero axiom. Companion to arXiv:2604.24670.",
   "creators": [
     {
       "name": "Iskander, Ray",
@@ -30,7 +30,7 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "XXXX.XXXXX",
+      "identifier": "2604.24670",
       "relation": "isSupplementTo",
       "scheme": "arxiv"
     }

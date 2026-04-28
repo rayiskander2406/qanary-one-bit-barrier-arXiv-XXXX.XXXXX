@@ -17,7 +17,7 @@ This is the artifact repository for:
 > R. Iskander, K. Kirah. "Machine-Checked Cardinality Bounds for
 > Masked Barrett Reduction: A 1-Bit Side-Channel Leakage Barrier
 > in Post-Quantum Cryptographic Hardware."
-> arXiv:XXXX.XXXXX, 2026. *(arXiv ID pending.)*
+> arXiv:2604.24670, 2026.
 
 ## Context: Prior Papers in the Series
 
@@ -122,8 +122,8 @@ Requires [elan](https://github.com/leanprover/elan).
 curl https://elan.lean-lang.org/elan-init.sh -sSf | sh
 
 # Clone and build
-git clone https://github.com/rayiskander2406/qanary-one-bit-barrier-arXiv-XXXX.XXXXX
-cd qanary-one-bit-barrier-arXiv-XXXX.XXXXX
+git clone https://github.com/rayiskander2406/qanary-one-bit-barrier-arXiv-2604.24670
+cd qanary-one-bit-barrier-arXiv-2604.24670
 lake build
 ```
 
@@ -261,7 +261,7 @@ If you use this artifact, please cite the paper:
              Post-Quantum Cryptographic Hardware},
   journal = {arXiv preprint},
   year    = {2026},
-  note    = {arXiv:XXXX.XXXXX (ID pending)},
+  note    = {arXiv:2604.24670},
 }
 ```
 

@@ -1,8 +1,8 @@
 # DESIGN — The 1-Bit Barrier
 
-Design document for the Paper 5 artifact: proof strategy, internal
-audit results, consolidated reconnaissance notes, and the algebraic
-proof of the universality theorem.
+Design document for the Paper 5 artifact: proof strategy,
+consolidated reconnaissance notes, and the algebraic proof of the
+universality theorem.
 
 ---
 
@@ -124,7 +124,7 @@ reconnaissance that preceded the formal proof. Content adapted from
 the pre-formalization Python + Lean reconnaissance artifacts
 (originally produced 2026-04-14).
 
-### 5.1 Barrett Specification (Adams Bridge RTL + FIPS 203)
+### 4.1 Barrett Specification (Adams Bridge RTL + FIPS 203)
 
 Reference: `masked_barrett_reduction.sv` (Adams Bridge, 178 lines).
 Cross-reference: FIPS 203 §4.2.1.
@@ -141,7 +141,7 @@ Barrett algorithm: `Barrett(x) = x − floor(x·μ / 2^s)·q` with one
 conditional correction. Under Adams Bridge's masking, the fresh
 output mask `rnd_24bit` enters only at the output register.
 
-### 5.2 Empirical Bijection Results
+### 4.2 Empirical Bijection Results
 
 Exhaustive Python verification (pre-formalization):
 
@@ -163,7 +163,7 @@ between the direct and wraparound regions.
 bijection. Confirms that the non-bijection in Model C is a
 hardware-Nat artifact, not an algebraic property of Barrett.
 
-### 5.3 Framework Selection
+### 4.3 Framework Selection
 
 The binary question "is `m ↦ Barrett_masked(x, m)` bijective?" has a
 split answer: **yes for output re-masking (Model A), no for internal
@@ -180,7 +180,7 @@ The **PF-PINI over ZMod q** framework captures this exactly:
 4. An **PF-PINI instance** separates internal leakage from
    output-composability.
 
-### 5.4 Connection to Paper 1's 165 Barrett Wires
+### 4.4 Connection to Paper 1's 165 Barrett Wires
 
 Paper 1 (QANARY structural dependency analysis) flagged 198 Barrett
 wires, of which 165 are INSECURE_CONSERVATIVE (depend on both shares
@@ -198,7 +198,7 @@ This provides a quantitative bound on Paper 1's conservative flag.
 
 ## 5. Universality Theorem and Empirical Evidence
 
-### 6.1 Theorem Statement
+### 5.1 Theorem Statement
 
 For any odd prime `q > 2` and any integer `s ≥ ⌈log₂ q⌉`, define
 `f_x : ZMod q → ZMod q` by
@@ -223,7 +223,7 @@ not collapse. QED.
 without the prime-q restriction — only `NeZero q` is needed for the
 cardinality bound; the prime hypothesis is needed for tightness.)
 
-### 6.2 Scope Condition `s ≥ ⌈log₂ q⌉`
+### 5.2 Scope Condition `s ≥ ⌈log₂ q⌉`
 
 For `s < ⌈log₂ q⌉` (i.e. `2^s < q`), the Nat mod `2^s` collapses
 multiple elements of `ZMod q`. The `max_multiplicity` in that
@@ -242,7 +242,7 @@ The transition to `max = 2` occurs exactly at `s = ⌈log₂ q⌉ = 12`.
 **Every real Barrett implementation satisfies the scope condition
 trivially** (standard choice is `s = 2⌈log₂ q⌉`).
 
-### 6.3 Empirical Verification Across 14 Moduli
+### 5.3 Empirical Verification Across 14 Moduli
 
 | Modulus | q | s | `2^s mod q` | `⌊2^s / q⌋` | max_mult | Theory |
 |---------|---|---|-------------|--------------|----------|--------|
@@ -266,7 +266,7 @@ moduli (5 PQC standards + 9 small-to-large primes covering the range
 q = 5 to q = 16,777,259). The empirical evidence is consistent with
 the Lean-proved algebraic bound; there is no counterexample.
 
-### 6.4 Corollary
+### 5.4 Corollary
 
 Barrett reduction under arithmetic masking has `max_multiplicity = 2`
 for every NTT-based PQC standard built over an odd prime field —

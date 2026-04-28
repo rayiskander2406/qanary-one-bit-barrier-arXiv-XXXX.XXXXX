@@ -9,10 +9,10 @@ authors:
   - family-names: Kirah
     given-names: Khaled
     orcid: "https://orcid.org/0000-0001-5090-2529"
-version: 1.0.0
-date-released: "2026-04-16"
+version: 1.0.1
+date-released: "2026-04-28"
 license: MIT
-repository-code: "https://github.com/rayiskander2406/qanary-one-bit-barrier-arXiv-XXXX.XXXXX"
+repository-code: "https://github.com/rayiskander2406/qanary-one-bit-barrier-arXiv-2604.24670"
 keywords:
   - Post-Quantum Cryptography
   - Side-Channel Analysis
@@ -39,5 +39,5 @@ preferred-citation:
   year: 2026
   identifiers:
     - type: other
-      value: "arXiv:XXXX.XXXXX"
-      description: "arXiv preprint (ID pending)"
+      value: "arXiv:2604.24670"
+      description: "arXiv preprint"
