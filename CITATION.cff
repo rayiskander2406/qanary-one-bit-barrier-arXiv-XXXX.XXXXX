@@ -12,7 +12,16 @@ authors:
 version: 1.0.1
 date-released: "2026-04-28"
 license: MIT
+doi: "10.5281/zenodo.19842166"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19842166"
+    description: "Zenodo concept DOI (resolves to latest version)"
+  - type: doi
+    value: "10.5281/zenodo.19842167"
+    description: "Zenodo version DOI (v1.0.1)"
 repository-code: "https://github.com/rayiskander2406/qanary-one-bit-barrier-arXiv-2604.24670"
+url: "https://doi.org/10.5281/zenodo.19842166"
 keywords:
   - Post-Quantum Cryptography
   - Side-Channel Analysis

@@ -6,6 +6,8 @@
 [![Mathlib](https://img.shields.io/badge/Mathlib-322515540d7f-green)](https://github.com/leanprover-community/mathlib4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Sorry-Free](https://img.shields.io/badge/sorry-0-brightgreen)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2604.24670-b31b1b.svg)](https://arxiv.org/abs/2604.24670)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19842166.svg)](https://doi.org/10.5281/zenodo.19842166)
 
 Machine-checked Lean 4 proof that Barrett reduction under first-order
 arithmetic masking has preimage multiplicity **at most 2, tightly
@@ -262,6 +264,31 @@ If you use this artifact, please cite the paper:
   journal = {arXiv preprint},
   year    = {2026},
   note    = {arXiv:2604.24670},
+}
+```
+
+To cite this specific artifact (Lean 4 proof suite) with a persistent
+identifier, use the Zenodo DOI:
+
+- **Concept DOI** (always resolves to the latest version — cite this
+  for "the artifact" generally):
+  [`10.5281/zenodo.19842166`](https://doi.org/10.5281/zenodo.19842166)
+- **v1.0.1 Version DOI** (fixed to commit `a0207b1`, for bit-for-bit
+  reproducibility pinning):
+  [`10.5281/zenodo.19842167`](https://doi.org/10.5281/zenodo.19842167)
+
+```bibtex
+@software{IskanderKirah2026OneBitBarrierArtifact,
+  author    = {Ray Iskander and Khaled Kirah},
+  title     = {Artifact: Machine-Checked Cardinality Bounds for Masked
+               Barrett Reduction — A 1-Bit Side-Channel Leakage Barrier
+               in Post-Quantum Cryptographic Hardware
+               (arXiv:2604.24670)},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v1.0.1},
+  doi       = {10.5281/zenodo.19842166},
+  url       = {https://doi.org/10.5281/zenodo.19842166},
 }
 ```
 
